@@ -4,10 +4,10 @@ $jsonData = Get-Content $jsonPath | ConvertFrom-Json
 # Define a key map for common keys
 $keyMap = @{
     32 = "Space"; 49 = "1"; 50 = "2"; 51 = "3"; 52 = "4";
-    65 = "A"; 68 = "D"; 69 = "E"; 70 = "F"; 81 = "Q";
+    65 = "A"; 67 = "C"; 68 = "D"; 69 = "E"; 70 = "F"; 81 = "Q";
     82 = "R"; 83 = "S"; 86 = "V"; 87 = "W"; 160 = "Shift";
-    162 = "Ctrl"; 27 = "Esc"; 3 = "Mouse Button"; 0 = "Mouse Scroll Up";
-    1 = "Mouse Scroll Down"; 4 = "Mouse Button"
+    162 = "Ctrl"; 27 = "Esc"; 3 = "Mouse Button 1"; 0 = "Mouse Left Button";
+    1 = "Mouse Right Button"; 4 = "Mouse Button 2"
 }
 
 # Calculate required height for table
@@ -17,7 +17,18 @@ $extraHeight = $tableRows * $rowHeight + 20
 $totalHeight = $jsonData.Height + $extraHeight
 
 # Define SVG header with increased height
-$svgHeader = "<svg xmlns='http://www.w3.org/2000/svg' width='$($jsonData.Width)' height='$totalHeight' viewBox='0 0 $($jsonData.Width) $totalHeight'>"
+$svgHeader = @"
+<svg xmlns='http://www.w3.org/2000/svg' width='$($jsonData.Width)' height='$totalHeight' viewBox='0 0 $($jsonData.Width) $totalHeight'>
+    <style>
+        .keyboard-elements { opacity: 0.75; }
+        text { font-family: Arial, sans-serif; font-size: 11px; fill: black; }
+        rect { stroke: black; fill: gray; }
+        foreignObject { overflow: visible; }
+        table { font-family: Arial, sans-serif; font-size: 12px; border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid black; padding: 5px; text-align: left; }
+        th { background: #ddd; }
+    </style>
+"@
 $svgContent = ""
 $dimensionsTable = ""
 
@@ -38,8 +49,14 @@ foreach ($element in $jsonData.Elements) {
     $boundaries = $element.Boundaries
     
     # Extract key text from KeyCodes
-    $keyText = "Unknown"
-    if ($element.KeyCodes.Count -gt 0) {
+    $keyText = "Design element"
+    if ($id -eq 111) {
+        $keyText = "Scroll Down"
+    }
+    elseif ($id -eq 112){
+        $keyText = "Scroll Up"
+    }
+    elseif ($element.KeyCodes.Count -gt 0) {
         $keyCode = $element.KeyCodes[0]
         if ($keyMap.ContainsKey($keyCode)) {
             $keyText = $keyMap[$keyCode]
@@ -66,7 +83,7 @@ foreach ($element in $jsonData.Elements) {
     
     # Generate rectangle element for key with tooltip
     $svgContent += "<g>
-        <rect x='$xMin' y='$yMin' width='$width' height='$height' fill='lightgray' stroke='black'>
+        <rect class='keyboard-elements' x='$xMin' y='$yMin' width='$width' height='$height' fill='lightgray' stroke='black'>
             <title>ID: $id - Key: $keyText</title>
         </rect>
     </g>"
