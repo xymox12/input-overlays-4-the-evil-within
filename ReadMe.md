@@ -8,7 +8,7 @@ Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption 
 
 ## To use
 
-The ready-to-use files are within the 'noadboard_files' folder. Drop the 'theevilwithin' folder into your noahboard 'keyboards' folder and select it from the noahboard interface.
+The ready-to-use files are within the 'noadboard_files' folder. Drop the 'theevilwithin' folder into your noahboard 'keyboards' folder and select it from the noahboard interface. The files are downloadable from the releases as a zip.
 
 ## SVG
 
