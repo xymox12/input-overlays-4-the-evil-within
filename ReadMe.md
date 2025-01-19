@@ -1,5 +1,7 @@
 # Input Overlay for The Evil Within
 
+![Layout of keys and mouse in noahbaord application](kbd_layout.png)
+
 Currently a set of files to create a Noahboard Mouse and Keyboard overlay for The Evil Within, to use with OBS etc.
 
 Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption for noahboard of the Input Overlay design (https://github.com/univrsal/input-overlay.) This is a new svg version of those bitmap files, not reuse of the original bitmap files. The use of svg should allow easier design choices in the future.
