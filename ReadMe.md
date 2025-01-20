@@ -10,6 +10,8 @@ Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption 
 
 The ready-to-use files are within the 'noadboard_files' folder. Drop the 'theevilwithin' folder into your noahboard 'keyboards' folder and select it from the noahboard interface. The files are downloadable from the releases as a zip.
 
+There are 2 current layouts - 1 with the mouse direction/speed indicator, and 1 without.
+
 ## SVG
 
 All SVG files were created using Inkscape v1.4. Inkscape has a great batch layer export that makes exporting the correctly named png files extremely easy.
