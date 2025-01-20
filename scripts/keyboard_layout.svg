@@ -4,82 +4,82 @@
         .mouse-key { fill: lightgrey; stroke: blue; stroke-width: 1; }
         .mouse-scroll { fill: lightgrey; stroke: green; stroke-width: 1; }
         .mouse-speed { fill: #EEE; stroke: red; stroke-width: 2; }
-    </style><rect class='keyboard-key' x='73' y='209' width='150' height='64'>
+    </style><rect id='7' class='keyboard-key' x='73' y='209' width='150' height='64'>
 <title>ID:7; Key: Spacebar</title>
 </rect>
-<rect class='keyboard-key' x='73' y='5' width='80' height='64'>
+<rect id='19' class='keyboard-key' x='73' y='5' width='80' height='64'>
 <title>ID:19; Key: D1</title>
 </rect>
-<rect class='keyboard-key' x='143' y='5' width='80' height='64'>
+<rect id='20' class='keyboard-key' x='143' y='5' width='80' height='64'>
 <title>ID:20; Key: D2</title>
 </rect>
-<rect class='keyboard-key' x='213' y='5' width='80' height='64'>
+<rect id='21' class='keyboard-key' x='213' y='5' width='80' height='64'>
 <title>ID:21; Key: D3</title>
 </rect>
-<rect class='keyboard-key' x='283' y='5' width='80' height='64'>
+<rect id='22' class='keyboard-key' x='283' y='5' width='80' height='64'>
 <title>ID:22; Key: D4</title>
 </rect>
-<rect class='keyboard-key' x='73' y='141' width='80' height='64'>
+<rect id='29' class='keyboard-key' x='73' y='141' width='80' height='64'>
 <title>ID:29; Key: A</title>
 </rect>
-<rect class='keyboard-key' x='213' y='141' width='80' height='64'>
+<rect id='32' class='keyboard-key' x='213' y='141' width='80' height='64'>
 <title>ID:32; Key: D</title>
 </rect>
-<rect class='keyboard-key' x='213' y='73' width='80' height='64'>
+<rect id='33' class='keyboard-key' x='213' y='73' width='80' height='64'>
 <title>ID:33; Key: E</title>
 </rect>
-<rect class='keyboard-key' x='283' y='141' width='80' height='64'>
+<rect id='34' class='keyboard-key' x='283' y='141' width='80' height='64'>
 <title>ID:34; Key: F</title>
 </rect>
-<rect class='keyboard-key' x='73' y='73' width='80' height='64'>
+<rect id='45' class='keyboard-key' x='73' y='73' width='80' height='64'>
 <title>ID:45; Key: Q</title>
 </rect>
-<rect class='keyboard-key' x='283' y='73' width='80' height='64'>
+<rect id='46' class='keyboard-key' x='283' y='73' width='80' height='64'>
 <title>ID:46; Key: R</title>
 </rect>
-<rect class='keyboard-key' x='143' y='141' width='80' height='64'>
+<rect id='47' class='keyboard-key' x='143' y='141' width='80' height='64'>
 <title>ID:47; Key: S</title>
 </rect>
-<rect class='keyboard-key' x='283' y='209' width='80' height='64'>
+<rect id='50' class='keyboard-key' x='283' y='209' width='80' height='64'>
 <title>ID:50; Key: V</title>
 </rect>
-<rect class='keyboard-key' x='143' y='73' width='80' height='64'>
+<rect id='51' class='keyboard-key' x='143' y='73' width='80' height='64'>
 <title>ID:51; Key: W</title>
 </rect>
-<rect class='keyboard-key' x='391' y='126' width='151' height='139'>
+<rect id='71' class='keyboard-key' x='391' y='126' width='151' height='139'>
 <title>ID:71; Key: None</title>
 </rect>
-<rect class='keyboard-key' x='3' y='141' width='80' height='64'>
+<rect id='87' class='keyboard-key' x='3' y='141' width='80' height='64'>
 <title>ID:87; Key: LeftShift</title>
 </rect>
-<rect class='keyboard-key' x='3' y='209' width='80' height='64'>
+<rect id='89' class='keyboard-key' x='3' y='209' width='80' height='64'>
 <title>ID:89; Key: LeftCtrl</title>
 </rect>
-<rect class='mouse-key' x='401' y='181' width='17' height='32'>
+<rect id='105' class='mouse-key' x='401' y='181' width='17' height='32'>
 <title>ID:105; Key: Mouse Button 2</title>
 </rect>
-<rect class='mouse-key' x='390' y='20' width='74' height='103'>
+<rect id='106' class='mouse-key' x='390' y='20' width='74' height='103'>
 <title>ID:106; Key: Mouse Left Button</title>
 </rect>
-<rect class='mouse-key' x='469' y='20' width='74' height='103'>
+<rect id='108' class='mouse-key' x='469' y='20' width='74' height='103'>
 <title>ID:108; Key: Mouse Right Button</title>
 </rect>
-<rect class='mouse-scroll' x='455' y='95' width='24' height='30'>
+<rect id='111' class='mouse-scroll' x='455' y='95' width='24' height='30'>
 <title>ID:111; Key: Down</title>
 </rect>
-<rect class='keyboard-key' x='213' y='209' width='80' height='64'>
+<rect id='113' class='keyboard-key' x='213' y='209' width='80' height='64'>
 <title>ID:113; Key: C</title>
 </rect>
-<rect class='keyboard-key' x='3' y='5' width='80' height='64'>
+<rect id='114' class='keyboard-key' x='3' y='5' width='80' height='64'>
 <title>ID:114; Key: Escape</title>
 </rect>
-<rect class='mouse-scroll' x='455' y='65' width='24' height='30'>
+<rect id='112' class='mouse-scroll' x='455' y='65' width='24' height='30'>
 <title>ID:112; Key: Up</title>
 </rect>
-<rect class='mouse-key' x='395' y='148' width='17' height='32'>
+<rect id='110' class='mouse-key' x='395' y='148' width='17' height='32'>
 <title>ID:110; Key: Mouse Button 1</title>
 </rect>
-<circle class='mouse-speed' cx='469' cy='185' r='35'>
+<circle id='115' class='mouse-speed' cx='469' cy='185' r='35'>
 <title>ID:115; Mouse Direction/Speed</title>
 </circle>
 </svg>

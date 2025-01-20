@@ -82,7 +82,7 @@ foreach ($element in $jsonData.Elements) {
             $y = $element.Boundaries[0].Y
             $width = $element.Boundaries[1].X - $element.Boundaries[0].X
             $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
-            $svgOutput += "<rect class='keyboard-key' x='$x' y='$y' width='$width' height='$height'>`n"
+            $svgOutput += "<rect id='$id' class='keyboard-key' x='$x' y='$y' width='$width' height='$height'>`n"
             $svgOutput += "<title>ID:$id; Key: $character</title>`n"
             $svgOutput += "</rect>`n"
         }
@@ -92,7 +92,7 @@ foreach ($element in $jsonData.Elements) {
             $y = $element.Boundaries[0].Y
             $width = $element.Boundaries[1].X - $element.Boundaries[0].X
             $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
-            $svgOutput += "<rect class='mouse-key' x='$x' y='$y' width='$width' height='$height'>`n"
+            $svgOutput += "<rect id='$id' class='mouse-key' x='$x' y='$y' width='$width' height='$height'>`n"
 			$svgOutput += "<title>ID:$id; Key: $($mouseKeyCodes[$kc])</title>`n"
 			$svgOutput += "</rect>`n"
         }
@@ -103,7 +103,7 @@ foreach ($element in $jsonData.Elements) {
 			$y = $element.Boundaries[0].Y
 			$width = $element.Boundaries[1].X - $element.Boundaries[0].X
 			$height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
-			$svgOutput += "<rect class='mouse-scroll' x='$x' y='$y' width='$width' height='$height'>`n"
+			$svgOutput += "<rect id='$id' class='mouse-scroll' x='$x' y='$y' width='$width' height='$height'>`n"
 			$svgOutput += "<title>ID:$id; Key: $($mouseScrollCodes[$kc])</title>`n"
 			$svgOutput += "</rect>`n"
         }
@@ -111,7 +111,7 @@ foreach ($element in $jsonData.Elements) {
             $cx = $element.Location.X
             $cy = $element.Location.Y
             $r = $element.Radius
-            $svgOutput += "<circle class='mouse-speed' cx='$cx' cy='$cy' r='$r'>`n"
+            $svgOutput += "<circle id='$id' class='mouse-speed' cx='$cx' cy='$cy' r='$r'>`n"
 			$svgOutput += "<title>ID:$id; Mouse Direction/Speed</title>`n"
 			$svgOutput += "</circle>`n"
         }
