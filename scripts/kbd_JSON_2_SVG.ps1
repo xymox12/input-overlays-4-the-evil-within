@@ -47,6 +47,19 @@ function Get-KeyName {
     }
 }
 
+$mouseKeyCodes = @{
+		0 = 'Mouse Left Button'
+		1 = "Mouse Right Button"
+		3 = "Mouse Button 1"
+		4 = "Mouse Button 2"
+}
+
+$mouseScrollCodes = @{
+	 0 = 'Up'
+	 1 = 'Down'
+	 2 = 'Right'
+	 3 = 'Left'
+}
 
 # Start the SVG output
 $svgOutput = @"
@@ -55,7 +68,7 @@ $svgOutput = @"
         .keyboard-key { fill: grey; stroke: black; stroke-width: 1; opacity: 0.5; }
         .mouse-key { fill: lightgrey; stroke: blue; stroke-width: 1; }
         .mouse-scroll { fill: lightgrey; stroke: green; stroke-width: 1; }
-        .mouse-speed { fill: none; stroke: red; stroke-width: 2; }
+        .mouse-speed { fill: #EEE; stroke: red; stroke-width: 2; }
     </style>
 "@
 
@@ -70,28 +83,37 @@ foreach ($element in $jsonData.Elements) {
             $width = $element.Boundaries[1].X - $element.Boundaries[0].X
             $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
             $svgOutput += "<rect class='keyboard-key' x='$x' y='$y' width='$width' height='$height'>`n"
-            $svgOutput += "<title>ID:$id, Key: $character</title>`n"
-            $svgOutput += "</rect>"
+            $svgOutput += "<title>ID:$id; Key: $character</title>`n"
+            $svgOutput += "</rect>`n"
         }
         MouseKey {
+			$kc = [int]$element.keyCodes[0]
             $x = $element.Boundaries[0].X
             $y = $element.Boundaries[0].Y
             $width = $element.Boundaries[1].X - $element.Boundaries[0].X
             $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
-            $svgOutput += "<rect class='mouse-key' x='$x' y='$y' width='$width' height='$height'/>`n"
+            $svgOutput += "<rect class='mouse-key' x='$x' y='$y' width='$width' height='$height'>`n"
+			$svgOutput += "<title>ID:$id; Key: $($mouseKeyCodes[$kc])</title>`n"
+			$svgOutput += "</rect>`n"
         }
         MouseScroll {
-            $x = $element.Boundaries[0].X
-            $y = $element.Boundaries[0].Y
-            $width = $element.Boundaries[1].X - $element.Boundaries[0].X
-            $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
-            $svgOutput += "<rect class='mouse-scroll' x='$x' y='$y' width='$width' height='$height'/>`n"
+			# Assuming $element.keyCodes[0] exists and contains a valid key code
+			$kc = [int]$element.keyCodes[0]
+			$x = $element.Boundaries[0].X
+			$y = $element.Boundaries[0].Y
+			$width = $element.Boundaries[1].X - $element.Boundaries[0].X
+			$height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
+			$svgOutput += "<rect class='mouse-scroll' x='$x' y='$y' width='$width' height='$height'>`n"
+			$svgOutput += "<title>ID:$id; Key: $($mouseScrollCodes[$kc])</title>`n"
+			$svgOutput += "</rect>`n"
         }
         MouseSpeedIndicator {
             $cx = $element.Location.X
             $cy = $element.Location.Y
             $r = $element.Radius
-            $svgOutput += "<circle class='mouse-speed' cx='$cx' cy='$cy' r='$r'/>`n"
+            $svgOutput += "<circle class='mouse-speed' cx='$cx' cy='$cy' r='$r'>`n"
+			$svgOutput += "<title>ID:$id; Mouse Direction/Speed</title>`n"
+			$svgOutput += "</circle>`n"
         }
     }
 }
