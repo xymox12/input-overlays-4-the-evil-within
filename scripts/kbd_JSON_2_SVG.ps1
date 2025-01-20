@@ -1,109 +1,50 @@
-$jsonPath = "./keyboard.json"
+# Load the JSON file
+$jsonPath = "keyboard.json"
 $jsonData = Get-Content $jsonPath | ConvertFrom-Json
 
-# Define a key map for common keys
-$keyMap = @{
-    32 = "Space"; 49 = "1"; 50 = "2"; 51 = "3"; 52 = "4";
-    65 = "A"; 67 = "C"; 68 = "D"; 69 = "E"; 70 = "F"; 81 = "Q";
-    82 = "R"; 83 = "S"; 86 = "V"; 87 = "W"; 160 = "Shift";
-    162 = "Ctrl"; 27 = "Esc"; 3 = "Mouse Button 1"; 0 = "Mouse Left Button";
-    1 = "Mouse Right Button"; 4 = "Mouse Button 2"
-}
-
-# Calculate required height for table
-$tableRows = $jsonData.Elements.Count + 2  # Extra rows for headers
-$rowHeight = 15
-$extraHeight = $tableRows * $rowHeight + 20
-$totalHeight = $jsonData.Height + $extraHeight
-
-# Define SVG header with increased height
-$svgHeader = @"
-<svg xmlns='http://www.w3.org/2000/svg' width='$($jsonData.Width)' height='$totalHeight' viewBox='0 0 $($jsonData.Width) $totalHeight'>
-    <style>
-        .keyboard-elements { opacity: 0.75; }
-        text { font-family: Arial, sans-serif; font-size: 11px; fill: black; }
-        rect { stroke: black; fill: gray; }
-        foreignObject { overflow: visible; }
-        table { font-family: Arial, sans-serif; font-size: 12px; border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid black; padding: 5px; text-align: left; }
-        th { background: #ddd; }
-    </style>
+# Start the SVG output
+$svgOutput = @"
+<svg width='$($jsonData.Width)' height='$($jsonData.Height)' xmlns='http://www.w3.org/2000/svg'>
 "@
-$svgContent = ""
-$dimensionsTable = ""
 
-$yOffset = $jsonData.Height + 20 # Start table below keyboard
-$colWidth = 50
-
-# Table headers
-$headers = @("ID", "Width", "Height", "X1,Y1", "X2,Y2", "X3,Y3", "X4,Y4", "Key")
-$xPos = 10
-foreach ($header in $headers) {
-    $dimensionsTable += "<text x='$xPos' y='$yOffset' font-size='12' font-weight='bold'>$header</text>"
-    $xPos += $colWidth
-}
-$yOffset += $rowHeight
-
+# Iterate through elements in JSON
 foreach ($element in $jsonData.Elements) {
-    $id = $element.Id
-    $boundaries = $element.Boundaries
-    
-    # Extract key text from KeyCodes
-    $keyText = "Design element"
-    if ($id -eq 111) {
-        $keyText = "Scroll Down"
-    }
-    elseif ($id -eq 112){
-        $keyText = "Scroll Up"
-    }
-    elseif ($element.KeyCodes.Count -gt 0) {
-        $keyCode = $element.KeyCodes[0]
-        if ($keyMap.ContainsKey($keyCode)) {
-            $keyText = $keyMap[$keyCode]
-        } else {
-            $keyText = "KeyCode $keyCode"
+    $type = $element.PSObject.Properties["__type"].Value
+    switch ($type) {
+        KeyboardKey {
+            $x = $element.Boundaries[0].X
+            $y = $element.Boundaries[0].Y
+            $width = $element.Boundaries[1].X - $element.Boundaries[0].X
+            $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
+            $svgOutput += "<rect x='$x' y='$y' width='$width' height='$height' stroke='black' fill='white'/>`n"
+        }
+        MouseKey {
+            $x = $element.Boundaries[0].X
+            $y = $element.Boundaries[0].Y
+            $width = $element.Boundaries[1].X - $element.Boundaries[0].X
+            $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
+            $svgOutput += "<rect x='$x' y='$y' width='$width' height='$height' stroke='blue' fill='lightgrey'/>`n"
+        }
+        MouseScroll {
+            $x = $element.Boundaries[0].X
+            $y = $element.Boundaries[0].Y
+            $width = $element.Boundaries[1].X - $element.Boundaries[0].X
+            $height = $element.Boundaries[2].Y - $element.Boundaries[1].Y
+            $svgOutput += "<rect x='$x' y='$y' width='$width' height='$height' stroke='green' fill='lightgrey'/>`n"
+        }
+        MouseSpeedIndicator {
+            $cx = $element.Location.X
+            $cy = $element.Location.Y
+            $r = $element.Radius
+            $svgOutput += "<circle cx='$cx' cy='$cy' r='$r' stroke='red' fill='none' stroke-width='2'/>`n"
         }
     }
-    
-    # Extract coordinates
-    $xMin = ($boundaries | Sort-Object X | Select-Object -First 1).X
-    $yMin = ($boundaries | Sort-Object Y | Select-Object -First 1).Y
-    $xMax = ($boundaries | Sort-Object X | Select-Object -Last 1).X
-    $yMax = ($boundaries | Sort-Object Y | Select-Object -Last 1).Y
-    
-    # Calculate width and height
-    $width = $xMax - $xMin
-    $height = $yMax - $yMin
-    
-    # Get corner coordinates
-    $corner1 = "$($boundaries[0].X),$($boundaries[0].Y)"
-    $corner2 = "$($boundaries[1].X),$($boundaries[1].Y)"
-    $corner3 = "$($boundaries[2].X),$($boundaries[2].Y)"
-    $corner4 = "$($boundaries[3].X),$($boundaries[3].Y)"
-    
-    # Generate rectangle element for key with tooltip
-    $svgContent += "<g>
-        <rect class='keyboard-elements' x='$xMin' y='$yMin' width='$width' height='$height' fill='lightgray' stroke='black'>
-            <title>ID: $id - Key: $keyText</title>
-        </rect>
-    </g>"
-    
-    # Add entry to table
-    $xPos = 10
-    $dataValues = @($id, $width, $height, $corner1, $corner2, $corner3, $corner4, $keyText)
-    foreach ($value in $dataValues) {
-        $dimensionsTable += "<text x='$xPos' y='$yOffset' font-size='10'>$value</text>"
-        $xPos += $colWidth
-    }
-    $yOffset += $rowHeight
 }
 
-# Close SVG tag
-$svgFooter = "</svg>"
+# Close the SVG output
+$svgOutput += "</svg>"
 
-# Write to SVG file
-$svgFilePath = "./keyboard_layout.svg"
-$svgOutput = $svgHeader + $svgContent + $dimensionsTable + $svgFooter
-$svgOutput | Out-File -Encoding utf8 $svgFilePath
+# Save to file
+$svgOutput | Out-File -Encoding utf8 "keyboard_layout.svg"
 
-Write-Host "SVG file generated at $svgFilePath"
+Write-Output "SVG file generated: keyboard_layout.svg"

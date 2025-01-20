@@ -785,15 +785,6 @@
         "X": 403,
         "Y": 161
       }
-    },
-    {
-      "__type": "MouseSpeedIndicator",
-      "Id": 115,
-      "Location": {
-        "X": 469,
-        "Y": 185
-      },
-      "Radius": 35
     }
   ],
   "Height": 292,
