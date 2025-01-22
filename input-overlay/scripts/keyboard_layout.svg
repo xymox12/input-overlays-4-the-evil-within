@@ -1,0 +1,123 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="405" viewBox="0 0 1000 405">
+    <style>
+        .keyboard-key {
+            fill: lightgrey;
+            stroke: none;
+        }
+        .background {
+            fill: black;
+        }
+    </style>
+    <rect class="background" width="1000" height="405" />    <rect id="keyboard button0" class="keyboard-key" x="0" y="0" width="199" height="99" 
+          data-code="15" data-z-level="0" data-mapping-x="1" data-mapping-y="1" 
+          data-mapping-width="199" data-mapping-height="99" data-type="1">
+        <title>keyboard button0</title>
+    </rect>    <rect id="keyboard button1" class="keyboard-key" x="200" y="0" width="99" height="99" 
+          data-code="16" data-z-level="0" data-mapping-x="204" data-mapping-y="1" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button1</title>
+    </rect>    <rect id="keyboard button2" class="keyboard-key" x="300" y="0" width="99" height="99" 
+          data-code="17" data-z-level="0" data-mapping-x="307" data-mapping-y="1" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button2</title>
+    </rect>    <rect id="keyboard button3" class="keyboard-key" x="400" y="0" width="98" height="99" 
+          data-code="18" data-z-level="0" data-mapping-x="411" data-mapping-y="1" 
+          data-mapping-width="98" data-mapping-height="99" data-type="1">
+        <title>keyboard button3</title>
+    </rect>    <rect id="keyboard button4" class="keyboard-key" x="0" y="102" width="229" height="99" 
+          data-code="58" data-z-level="0" data-mapping-x="1" data-mapping-y="205" 
+          data-mapping-width="229" data-mapping-height="99" data-type="1">
+        <title>keyboard button4</title>
+    </rect>    <rect id="keyboard button5" class="keyboard-key" x="230" y="102" width="98" height="99" 
+          data-code="30" data-z-level="0" data-mapping-x="232" data-mapping-y="205" 
+          data-mapping-width="98" data-mapping-height="99" data-type="1">
+        <title>keyboard button5</title>
+    </rect>    <rect id="keyboard button6" class="keyboard-key" x="329" y="102" width="99" height="99" 
+          data-code="31" data-z-level="0" data-mapping-x="331" data-mapping-y="205" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button6</title>
+    </rect>    <rect id="keyboard button7" class="keyboard-key" x="429" y="102" width="99" height="99" 
+          data-code="32" data-z-level="0" data-mapping-x="431" data-mapping-y="205" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button7</title>
+    </rect>    <rect id="keyboard button8" class="keyboard-key" x="0" y="204" width="259" height="99" 
+          data-code="42" data-z-level="0" data-mapping-x="1" data-mapping-y="409" 
+          data-mapping-width="259" data-mapping-height="99" data-type="1">
+        <title>keyboard button8</title>
+    </rect>    <rect id="keyboard button9" class="keyboard-key" x="260" y="204" width="99" height="99" 
+          data-code="44" data-z-level="0" data-mapping-x="261" data-mapping-y="409" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button9</title>
+    </rect>    <rect id="keyboard button10" class="keyboard-key" x="360" y="204" width="99" height="99" 
+          data-code="45" data-z-level="0" data-mapping-x="361" data-mapping-y="409" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button10</title>
+    </rect>    <rect id="keyboard button11" class="keyboard-key" x="461" y="204" width="99" height="99" 
+          data-code="46" data-z-level="0" data-mapping-x="461" data-mapping-y="409" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button11</title>
+    </rect>    <rect id="keyboard button12" class="keyboard-key" x="600" y="0" width="99" height="99" 
+          data-code="71" data-z-level="0" data-mapping-x="691" data-mapping-y="1" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button12</title>
+    </rect>    <rect id="keyboard button13" class="keyboard-key" x="700" y="0" width="99" height="99" 
+          data-code="72" data-z-level="0" data-mapping-x="793" data-mapping-y="1" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button13</title>
+    </rect>    <rect id="keyboard button14" class="keyboard-key" x="800" y="0" width="99" height="99" 
+          data-code="73" data-z-level="0" data-mapping-x="895" data-mapping-y="1" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button14</title>
+    </rect>    <rect id="keyboard button15" class="keyboard-key" x="600" y="102" width="99" height="99" 
+          data-code="75" data-z-level="0" data-mapping-x="691" data-mapping-y="207" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button15</title>
+    </rect>    <rect id="keyboard button16" class="keyboard-key" x="700" y="102" width="99" height="99" 
+          data-code="76" data-z-level="0" data-mapping-x="793" data-mapping-y="207" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button16</title>
+    </rect>    <rect id="keyboard button17" class="keyboard-key" x="800" y="102" width="100" height="100" 
+          data-code="77" data-z-level="0" data-mapping-x="895" data-mapping-y="207" 
+          data-mapping-width="100" data-mapping-height="100" data-type="1">
+        <title>keyboard button17</title>
+    </rect>    <rect id="keyboard button19" class="keyboard-key" x="700" y="204" width="99" height="99" 
+          data-code="80" data-z-level="0" data-mapping-x="793" data-mapping-y="411" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button19</title>
+    </rect>    <rect id="keyboard button20" class="keyboard-key" x="800" y="204" width="100" height="99" 
+          data-code="81" data-z-level="0" data-mapping-x="895" data-mapping-y="411" 
+          data-mapping-width="100" data-mapping-height="99" data-type="1">
+        <title>keyboard button20</title>
+    </rect>    <rect id="keyboard button21" class="keyboard-key" x="900" y="0" width="100" height="199" 
+          data-code="78" data-z-level="0" data-mapping-x="1191" data-mapping-y="1" 
+          data-mapping-width="100" data-mapping-height="199" data-type="1">
+        <title>keyboard button21</title>
+    </rect>    <rect id="keyboard button22" class="keyboard-key" x="900" y="206" width="99" height="199" 
+          data-code="3612" data-z-level="0" data-mapping-x="1191" data-mapping-y="405" 
+          data-mapping-width="99" data-mapping-height="199" data-type="1">
+        <title>keyboard button22</title>
+    </rect>    <rect id="keyboard button23" class="keyboard-key" x="600" y="306" width="199" height="99" 
+          data-code="82" data-z-level="0" data-mapping-x="693" data-mapping-y="615" 
+          data-mapping-width="199" data-mapping-height="99" data-type="1">
+        <title>keyboard button23</title>
+    </rect>    <rect id="keyboard button24" class="keyboard-key" x="800" y="306" width="99" height="99" 
+          data-code="83" data-z-level="0" data-mapping-x="895" data-mapping-y="615" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button24</title>
+    </rect>    <rect id="keyboard button25" class="keyboard-key" x="0" y="306" width="144" height="99" 
+          data-code="29" data-z-level="0" data-mapping-x="1" data-mapping-y="613" 
+          data-mapping-width="144" data-mapping-height="99" data-type="1">
+        <title>keyboard button25</title>
+    </rect>    <rect id="keyboard button26" class="keyboard-key" x="146" y="306" width="144" height="99" 
+          data-code="56" data-z-level="0" data-mapping-x="146" data-mapping-y="613" 
+          data-mapping-width="144" data-mapping-height="99" data-type="1">
+        <title>keyboard button26</title>
+    </rect>    <rect id="keyboard button27" class="keyboard-key" x="293" y="306" width="300" height="99" 
+          data-code="57" data-z-level="0" data-mapping-x="291" data-mapping-y="613" 
+          data-mapping-width="300" data-mapping-height="99" data-type="1">
+        <title>keyboard button27</title>
+    </rect>    <rect id="keyboard button27b" class="keyboard-key" x="600" y="204" width="99" height="99" 
+          data-code="79" data-z-level="0" data-mapping-x="691" data-mapping-y="411" 
+          data-mapping-width="99" data-mapping-height="99" data-type="1">
+        <title>keyboard button27b</title>
+    </rect></svg>
