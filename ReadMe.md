@@ -1,14 +1,14 @@
 # Input Overlay for The Evil Within
 
-![Layout of keys and mouse in noahbaord application](kbd_layout.png)
+![Layout of keys and mouse in nohbaord application](kbd_layout.png)
 
-Currently a set of files to create a Noahboard Mouse and Keyboard overlay for The Evil Within, to use with OBS etc.
+Currently a set of files to create a Nohboard Mouse and Keyboard overlay for The Evil Within, to use with OBS etc.
 
-Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption for noahboard of the Input Overlay design (https://github.com/univrsal/input-overlay.) This is a new svg version of those bitmap files, not reuse of the original bitmap files. The use of svg should allow easier design choices in the future.
+Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption for nohboard of the Input Overlay design (https://github.com/univrsal/input-overlay.) This is a new svg version of those bitmap files, not reuse of the original bitmap files. The use of svg should allow easier design choices in the future.
 
 ## To use
 
-The ready-to-use files are within the 'noadboard_files' folder. Drop the 'theevilwithin' folder into your noahboard 'keyboards' folder and select it from the noahboard interface. The files are downloadable from the releases as a zip.
+The ready-to-use files are within the 'nohboard_files' folder. Drop the 'theevilwithin' folder into your nohboard 'keyboards' folder and select it from the noahboard interface. The files are downloadable from the releases as a zip.
 
 There are 2 current layouts - 1 with the mouse direction/speed indicator, and 1 without.
 
@@ -28,7 +28,7 @@ kbd_JSON_2_SVG.ps1: Reads the keyboard.json and creates an svg with the bounding
 
 
 
-## Noahboard 
+## Nohboard 
 
 * https://github.com/ThoNoht/NohBoard/releases
 
