@@ -1,8 +1,17 @@
 # Input Overlay for The Evil Within
 
+
+## v1
 ![Layout of keys and mouse in nohbaord application](kbd_layout.png)
 
-Currently a set of files to create a Nohboard Mouse and Keyboard overlay for The Evil Within, to use with OBS etc. (This readme needs updating!)
+## v2
+![Layout of keys and mouse in nohbaord application](kbd_layout_v2.png)
+
+## v3
+![Layout of keys and mouse in nohbaord application](kbd_layout_v3.png)
+
+
+Currently a set of files to create a Nohboard Mouse and Keyboard overlay for The Evil Within, to use with OBS etc.
 
 Inspired by ComicallyBad (https://www.youtube.com/watch?v=LXmwDT2yfwk) adaption for nohboard of the Input Overlay design (https://github.com/univrsal/input-overlay.) This is a new svg version of those bitmap files, not reuse of the original bitmap files. The use of svg should allow easier design choices in the future.
 
@@ -13,6 +22,8 @@ The ready-to-use files are within the 'nohboard_files' folder. Drop the 'TheEvil
 v1 is the original mouse and font, v2 is with a stylise version of the g402 mouse, and v3 is an upddate g402 design and uses the Evil Within dialogue font for the keys.
 
 ## SVG
+
+(FYI: This section needs updating!)
 
 All SVG files were created using Inkscape v1.4. Inkscape has a great batch layer export that makes exporting the correctly named png files extremely easy.
 
