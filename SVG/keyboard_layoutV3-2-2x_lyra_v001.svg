@@ -188,7 +188,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="LooseKeys_Skewed"
-     style="display:inline"><g
+     style="display:inline"
+     sodipodi:insensitive="true"><g
        inkscape:groupmode="layer"
        id="layer27"
        inkscape:label="VL"><use
@@ -578,7 +579,8 @@
      inkscape:groupmode="layer"
      id="g65"
      inkscape:label="PressedKeys_Skewed"
-     style="display:inline"><g
+     style="display:inline"
+     sodipodi:insensitive="true"><g
        inkscape:groupmode="layer"
        id="g34"
        inkscape:label="VP"><use

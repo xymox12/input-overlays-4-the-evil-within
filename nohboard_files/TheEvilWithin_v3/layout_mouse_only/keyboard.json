@@ -1,0 +1,157 @@
+{
+  "Elements": [
+    {
+      "__type": "KeyboardKey",
+      "Id": 71,
+      "Boundaries": [
+        {
+          "X": 62,
+          "Y": 146
+        },
+        {
+          "X": 182,
+          "Y": 146
+        },
+        {
+          "X": 182,
+          "Y": 249
+        },
+        {
+          "X": 62,
+          "Y": 249
+        }
+      ],
+      "KeyCodes": [ ],
+      "Text": "",
+      "TextPosition": {
+        "X": 128,
+        "Y": 214
+      },
+      "ChangeOnCaps": false,
+      "ShiftText": ""
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 106,
+      "Boundaries": [
+        {
+          "X": 62,
+          "Y": 28
+        },
+        {
+          "X": 122,
+          "Y": 28
+        },
+        {
+          "X": 122,
+          "Y": 146
+        },
+        {
+          "X": 62,
+          "Y": 146
+        }
+      ],
+      "KeyCodes": [
+        0
+      ],
+      "Text": "",
+      "TextPosition": {
+        "X": 92,
+        "Y": 93
+      }
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 108,
+      "Boundaries": [
+        {
+          "X": 122,
+          "Y": 28
+        },
+        {
+          "X": 182,
+          "Y": 28
+        },
+        {
+          "X": 182,
+          "Y": 146
+        },
+        {
+          "X": 122,
+          "Y": 146
+        }
+      ],
+      "KeyCodes": [
+        1
+      ],
+      "Text": "",
+      "TextPosition": {
+        "X": 152,
+        "Y": 87
+      }
+    },
+    {
+      "__type": "MouseScroll",
+      "Id": 111,
+      "Boundaries": [
+        {
+          "X": 114,
+          "Y": 85
+        },
+        {
+          "X": 130,
+          "Y": 85
+        },
+        {
+          "X": 130,
+          "Y": 105
+        },
+        {
+          "X": 114,
+          "Y": 105
+        }
+      ],
+      "KeyCodes": [
+        1
+      ],
+      "Text": "",
+      "TextPosition": {
+        "X": 122,
+        "Y": 95
+      }
+    },
+    {
+      "__type": "MouseScroll",
+      "Id": 112,
+      "Boundaries": [
+        {
+          "X": 114,
+          "Y": 65
+        },
+        {
+          "X": 130,
+          "Y": 65
+        },
+        {
+          "X": 130,
+          "Y": 85
+        },
+        {
+          "X": 114,
+          "Y": 85
+        }
+      ],
+      "KeyCodes": [
+        0
+      ],
+      "Text": "",
+      "TextPosition": {
+        "X": 122,
+        "Y": 75
+      }
+    }
+  ],
+  "Height": 289,
+  "Version": 2,
+  "Width": 243
+}
